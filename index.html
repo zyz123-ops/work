@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Div 适应图片宽度 - Flex</title>
+    <style>
+        /* 父容器设为flex */
+        .flex-parent {
+            display: flex;
+            align-items: center;
+            /* 垂直居中，可选 */
+            gap: 20px;
+            /* 与右侧文字的间距，可选 */
+            margin: 20px 0;
+        }
+
+        /* 图片容器：宽度由内容决定 */
+        .img-flex-wrapper {
+            flex: 0 0 auto;
+            /* 核心：不放大、不缩小、宽度自适应内容 */
+            border: 2px solid #3498db;
+            padding: 5px;
+        }
+
+        .img-flex-wrapper-img2 img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .img-flex-wrapper-img1 img {
+            display: block;
+            width: 200%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex-parent">
+        <div class="img-flex-wrapper-img2">
+            <img src="./html/img/2.jpg">
+
+
+        </div>
+        <div class="img-flex-wrapper-img1">
+            <img src="./././html/img/1.jpg">
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
